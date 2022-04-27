@@ -15,10 +15,7 @@ pipeline {
             steps {
                 script {
                     app = docker.build("zackalm/train-schedule")
-                    app.inside {
-                        sh 'echo $(curl localhost:8080)'
-                    }
-                }
+                 }
             }
         }
         stage('Push Docker Image') {
